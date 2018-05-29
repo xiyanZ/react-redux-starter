@@ -1,0 +1,24 @@
+.blog-item {
+  border: 2px solid #eee;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 20px;
+  padding-right: 20px;
+  cursor: pointer;
+  position: relative;
+  span {
+    background: tomato;
+    color: #fff;
+    padding: 2px 8px;
+  }
+  .delete {
+    position: absolute;
+    right: 2px;
+    top: 2px;
+  }
+  .delete:hover {
+    color: tomato;
+  }
+}

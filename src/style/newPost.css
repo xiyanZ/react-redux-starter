@@ -1,0 +1,36 @@
+.new-post section {
+  margin-bottom: 20px;
+}
+
+.new-post label {
+  display: block;
+}
+
+.new-post input {
+  width: 40%;
+  height: 30px;
+  font-size: 16px;
+}
+
+.new-post textarea {
+  width: 100%;
+  font-size: 16px;
+}
+
+.new-post button {
+  width: 100px;
+  height: 40px;
+  margin-right: 10px;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 16px;
+}
+
+.new-post button:first-child {
+  background: deepskyblue;
+}
+
+.new-post button:last-child {
+  background: deeppink;
+}
