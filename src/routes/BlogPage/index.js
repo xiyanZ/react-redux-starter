@@ -1,19 +1,16 @@
 import React from 'react'
-import Posts from './Posts'
+import Posts from '~components/Posts'
 import { Link } from 'react-router-dom'
 import connect from '@connect'
-import actions from '../actions'
 
 // let + const
 // 单向数据流
-
 @connect(state => ({
   posts: state.posts,
   showLoading: state.global.showLoading
 }))
-export default class App extends React.Component {
+export default class BlogPage extends React.Component {
   componentDidMount() {
-    console.log(this.props)
     this.props.fetchBlogs()
   }
   render() {
@@ -42,7 +39,11 @@ export default class App extends React.Component {
             撰写博客
           </Link>
         </div>
-        {!showLoading ? <Posts data={posts} /> : '加载中...'}
+        {!showLoading ? (
+          <Posts data={posts} deletePost={this.props.deleteBlog} />
+        ) : (
+          '加载中...'
+        )}
       </div>
     )
   }
