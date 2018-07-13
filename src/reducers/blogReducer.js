@@ -1,9 +1,22 @@
 export default {
   namespace: 'posts',
-  reducer: (state = [], action) => {
+  reducer: (state = { blogList: [], detail: {} }, action) => {
     switch (action.type) {
       case 'FETCH_BLOGS':
-        return [...action.payload]
+        return {
+          ...state,
+          blogList: action.payload
+        }
+      case 'FETCH_POST_DETAIL':
+        return {
+          ...state,
+          detail: action.payload
+        }
+      case 'CLEAR_POST_DETAIL':
+        return {
+          ...state,
+          detail: {}
+        }
       default:
         return state
     }

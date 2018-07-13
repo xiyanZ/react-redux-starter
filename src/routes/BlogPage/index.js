@@ -6,7 +6,7 @@ import connect from '@connect'
 // let + const
 // 单向数据流
 @connect(state => ({
-  posts: state.posts,
+  posts: state.posts.blogList,
   showLoading: state.global.showLoading
 }))
 export default class BlogPage extends React.Component {

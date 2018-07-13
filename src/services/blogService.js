@@ -13,3 +13,10 @@ export function deleteBlog(id) {
     'delete'
   )
 }
+
+export function fetchPostDetail(id) {
+  return request(
+    `http://reduxblog.herokuapp.com/api/posts/${id}?key=etong008linhoomjac20180510`,
+    'get'
+  )
+}

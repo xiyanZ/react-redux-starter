@@ -63,7 +63,6 @@ export default class NewPost extends Component {
 
     if (res.status === 201) {
       // 提交成功
-
       this.showMessage('提交成功！！！', 1500, () => {
         history.push('/')
       })
@@ -74,7 +73,7 @@ export default class NewPost extends Component {
   }
 
   render() {
-    const { title, content, categories, message } = this.state
+    const { message } = this.state
     return (
       <form
         className="new-post"
