@@ -4,6 +4,7 @@ import axios from 'axios'
 import { Field } from 'redux-form'
 import BlogFields from '~components/BlogFields'
 import reduxForm from '@reduxForm'
+import history from '@history'
 
 @reduxForm.create({
   validate
@@ -64,7 +65,7 @@ export default class NewPost extends Component {
       // 提交成功
 
       this.showMessage('提交成功！！！', 1500, () => {
-        this.props.history.push('/')
+        history.push('/')
       })
     } else {
       // 失败
@@ -90,7 +91,7 @@ export default class NewPost extends Component {
           <button
             type="button"
             onClick={() => {
-              this.props.history.push('/')
+              history.push('/')
             }}
           >
             取消

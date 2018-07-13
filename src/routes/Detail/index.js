@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import axios from 'axios'
 import connect from '@connect'
+import history from '@history'
 
 @connect(({ posts }) => ({
   posts
@@ -19,7 +20,7 @@ export default class Detail extends Component {
           key={curId}
           style={{ color: id == curId ? 'red' : 'black' }}
           onClick={() => {
-            this.props.history.push(`/posts/${curId}`)
+            history.push(`/posts/${curId}`)
           }}
         >
           {title}
