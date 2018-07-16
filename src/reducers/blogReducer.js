@@ -1,24 +1,26 @@
+import types from "../common/types";
+
 export default {
-  namespace: 'posts',
+  namespace: "posts",
   reducer: (state = { blogList: [], detail: {} }, action) => {
     switch (action.type) {
-      case 'FETCH_BLOGS':
+      case types.posts.FETCH_BLOGS:
         return {
           ...state,
           blogList: action.payload
-        }
-      case 'FETCH_POST_DETAIL':
+        };
+      case types.posts.FETCH_POST_DETAIL:
         return {
           ...state,
           detail: action.payload
-        }
-      case 'CLEAR_POST_DETAIL':
+        };
+      case types.posts.CLEAR_POST_DETAIL:
         return {
           ...state,
           detail: {}
-        }
+        };
       default:
-        return state
+        return state;
     }
   }
-}
+};
